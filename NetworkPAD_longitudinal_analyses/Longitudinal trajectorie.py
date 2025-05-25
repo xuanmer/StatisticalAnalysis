@@ -56,7 +56,7 @@ def classify_diagnosis_transitions(group):
     return transitions
 
 # 输入数据: predicted age difference
-data = pd.read_csv('adni_BA/merged_pad.csv')
+data = pd.read_csv('./merged_pad.csv')
 
 transition_results = (
     data.groupby('Subject ID')
@@ -245,7 +245,7 @@ plt.yticks(fontsize=20)
 plt.tight_layout()
 
 plt.xlim(-6, 0)
-plt.savefig(f'figure/net_pad_trajectory/net_pad_trajector_6yr.pdf')
+plt.savefig(f'./net_pad_trajector_6yr.pdf')
 
 all_individual_rates = all_individual_rates.drop_duplicates()
 print(all_individual_rates)
